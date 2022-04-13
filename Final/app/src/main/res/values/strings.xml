@@ -15,4 +15,5 @@
     <string name="numcontact">+33786546888</string>
     <string name="Val_Nom">Doe</string>
     <string name="BtnTestTxt">Test</string>
+    <string name="TxtValNumSec">Numéro de sécurité social</string>
 </resources>

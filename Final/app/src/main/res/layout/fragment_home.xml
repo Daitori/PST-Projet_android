@@ -37,7 +37,7 @@
         android:id="@+id/Nom"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:hint="@string/Val_Nom"
         android:importantForAutofill="no"
         android:inputType="text"
@@ -62,13 +62,13 @@
         android:id="@+id/Birth"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="28dp"
         android:hint="@string/Date_hint"
         android:importantForAutofill="no"
         android:inputType="date"
         android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Nom" />
 
@@ -76,39 +76,39 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
         android:text="@string/Text_Birth"
         app:layout_constraintBottom_toTopOf="@+id/Birth"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.185"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/Condition"
         android:layout_width="300dp"
         android:layout_height="150dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="36dp"
         android:hint="@string/condition"
         android:importantForAutofill="no"
         android:inputType="text"
         android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Birth"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber"
         tools:ignore="DuplicateSpeakableTextCheck" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="@string/condition"
         app:layout_constraintBottom_toTopOf="@+id/Condition"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.184"
+        app:layout_constraintHorizontal_bias="0.189"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
@@ -120,6 +120,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/Condition" />
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="299dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Birth" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="74dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="13dp"
+        android:text="@string/TxtValNumSec"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.169"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Birth"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
