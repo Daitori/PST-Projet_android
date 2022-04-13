@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Final</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="Spinner01">+</string>
+    <string name="Text_prenom">Prénom</string>
+    <string name="Text_nom">Nom</string>
+    <string name="Date_hint">13/02/2020</string>
+    <string name="Text_Birth">Date de naissance</string>
+    <string name="condition">Condition médicale</string>
+    <string name="next">Sauvegarder</string>
+    <string name="Val_Con">Condition med</string>
+    <string name="Val_Pre">John</string>
+    <string name="numcontact">+33786546888</string>
+    <string name="Val_Nom">Doe</string>
+    <string name="BtnTestTxt">Test</string>
+</resources>
