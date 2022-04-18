@@ -2,6 +2,7 @@ package com.example.afinal;
 
 
 import android.Manifest;
+
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -26,22 +27,10 @@ public class MainActivity extends AppCompatActivity {
     public EditText editTextPhoneNumber;
     public EditText editTextMessage;
 
-    /*public class patient{
-        public String Prenom;
-        public String Nom;
-        public Date Naissance;
-        public int NumeroSocial;
-        public String Condition;
-    }
-    public class messageenvoie{
-        public String Message;
-        public int Telephone;
 
-    }*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         com.example.afinal.databinding.ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         // Passing each menu ID as a set of Ids because each
@@ -54,7 +43,9 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(binding.navView, navController);
     }
 
-    public void SaveSpinner(){}
+    public void SaveSpinner(){
+
+    }
 
 
     public  void askPermissionAndSendSMS() {
@@ -76,9 +67,7 @@ public class MainActivity extends AppCompatActivity {
         String message = this.editTextMessage.getText().toString();
 
         try {
-            // Get the default instance of the SmsManager
             SmsManager smsManager = SmsManager.getDefault();
-            // Send Message
             smsManager.sendTextMessage(phoneNumber, null, message, null, null);
             Log.i( LOG_TAG,"Your sms has successfully sent!");
             Toast.makeText(getApplicationContext(),"Your sms has successfully sent!",
@@ -91,8 +80,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
-    // When you have the request results
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -114,8 +101,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-
-    // When results returned
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

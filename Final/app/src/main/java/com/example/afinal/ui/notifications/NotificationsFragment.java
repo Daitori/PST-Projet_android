@@ -5,10 +5,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.example.afinal.DBHandler;
 import com.example.afinal.MainActivity;
 import com.example.afinal.R;
 import com.example.afinal.databinding.FragmentNotificationsBinding;
@@ -18,10 +21,14 @@ import java.util.ArrayList;
 public class NotificationsFragment extends Fragment {
 
     private FragmentNotificationsBinding binding;
+    private EditText ContactNumEdt, ContactMsgEdt;
+    private DBHandler dbHandler;
 
     public View onCreateView(@NonNull LayoutInflater inflater,ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentNotificationsBinding.inflate(inflater, container, false);
-
+        ContactNumEdt = requireView().findViewById(R.id.Contact);
+        ContactMsgEdt = requireView().findViewById(R.id.Message);
+        dbHandler = new DBHandler(NotificationsFragment.this);
         return binding.getRoot();
     }
 

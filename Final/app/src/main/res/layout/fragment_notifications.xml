@@ -27,6 +27,7 @@
         android:duplicateParentState="false"
         android:importantForAutofill="no"
         android:inputType="text"
+        android:hint="@string/HintMsgUrg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"

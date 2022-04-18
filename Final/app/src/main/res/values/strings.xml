@@ -15,5 +15,7 @@
     <string name="numcontact">+33786546888</string>
     <string name="Val_Nom">Doe</string>
     <string name="BtnTestTxt">Test</string>
-    <string name="TxtValNumSec">Numéro de sécurité social</string>
+    <string name="TxtValNumSec">Numero de securite social</string>
+    <string name="HintNumSecSoc">1 60 04 25 311 114 26</string>
+    <string name="HintMsgUrg">Message d\'urgence</string>
 </resources>
