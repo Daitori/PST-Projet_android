@@ -18,4 +18,5 @@
     <string name="TxtValNumSec">Numero de securite social</string>
     <string name="HintNumSecSoc">1 60 04 25 311 114 26</string>
     <string name="HintMsgUrg">Message d\'urgence</string>
+    <string name="edit">Edit</string>
 </resources>

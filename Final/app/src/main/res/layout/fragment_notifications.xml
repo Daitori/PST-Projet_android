@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:contentDescription="@string/Spinner01"
         android:minHeight="48dp"
+        android:spinnerMode="dropdown"
         app:layout_constraintBottom_toTopOf="@+id/Contact"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
@@ -45,6 +46,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Message"
         app:layout_constraintVertical_bias="0.416" />
+
+    <Button
+        android:id="@+id/button_first3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginBottom="120dp"
+        android:text="@string/edit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Message"
+        app:layout_constraintVertical_bias="0.993" />
 
     <Button
         android:id="@+id/button_first4"

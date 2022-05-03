@@ -43,11 +43,6 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(binding.navView, navController);
     }
 
-    public void SaveSpinner(){
-
-    }
-
-
     public  void askPermissionAndSendSMS() {
         int sendSmsPermisson = ActivityCompat.checkSelfPermission(this ,Manifest.permission.SEND_SMS);
         if (sendSmsPermisson != PackageManager.PERMISSION_GRANTED) {
