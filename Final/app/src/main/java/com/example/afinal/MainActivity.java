@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     public EditText editTextMessage;
 
 
-    @Override
+    @Override //Creer par defaut jsp ce que ca fait
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         com.example.afinal.databinding.ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
@@ -42,20 +42,19 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
     }
-
-    public  void askPermissionAndSendSMS() {
+    //Demmande la permission a lutilisateur
+    public  void DemandePermissionSMS() {
         int sendSmsPermisson = ActivityCompat.checkSelfPermission(this ,Manifest.permission.SEND_SMS);
         if (sendSmsPermisson != PackageManager.PERMISSION_GRANTED) {
-            // If don't have permission so prompt the user.
-            this.requestPermissions(new String[]{Manifest.permission.SEND_SMS}, MY_PERMISSION_REQUEST_CODE_SEND_SMS
-            );
+            // Si on a pas la permission.
+            this.requestPermissions(new String[]{Manifest.permission.SEND_SMS}, MY_PERMISSION_REQUEST_CODE_SEND_SMS);
             return;
         }
-        this.sendSMS_by_smsManager();
+        this.sendSMS();
 
     }
 
-    private void sendSMS_by_smsManager()  {
+    private void sendSMS()  {
         this.editTextPhoneNumber = this.findViewById(R.id.Contact);
         this.editTextMessage = this.findViewById(R.id.Message);
         String phoneNumber = this.editTextPhoneNumber.getText().toString();
@@ -64,13 +63,11 @@ public class MainActivity extends AppCompatActivity {
         try {
             SmsManager smsManager = SmsManager.getDefault();
             smsManager.sendTextMessage(phoneNumber, null, message, null, null);
-            Log.i( LOG_TAG,"Your sms has successfully sent!");
-            Toast.makeText(getApplicationContext(),"Your sms has successfully sent!",
-                    Toast.LENGTH_LONG).show();
+            Log.i( LOG_TAG,"SMS envoyer!");
+            Toast.makeText(getApplicationContext(),"SMS envoyer!", Toast.LENGTH_LONG).show();
         } catch (Exception ex) {
             Log.e( LOG_TAG,"Your sms has failed...", ex);
-            Toast.makeText(getApplicationContext(),"Your sms has failed... " + ex.getMessage(),
-                    Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),"Your sms has failed... " + ex.getMessage(), Toast.LENGTH_LONG).show();
             ex.printStackTrace();
         }
     }
@@ -87,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.i(LOG_TAG, "Permission granted!");
                 Toast.makeText(this, "Permission granted!", Toast.LENGTH_LONG).show();
 
-                this.sendSMS_by_smsManager();
+                this.sendSMS();
             }
             // Cancelled or denied.
             else {

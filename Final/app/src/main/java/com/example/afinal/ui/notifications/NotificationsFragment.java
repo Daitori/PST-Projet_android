@@ -48,7 +48,8 @@ public class NotificationsFragment extends Fragment {
         ArrayList<String> arrayList1 = new ArrayList<>();
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<>(getActivity(), androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, arrayList1);  // layout for spinner itself
         spinner.setAdapter(dataAdapter);
-        Test.setOnClickListener(v -> ((MainActivity) requireActivity()).askPermissionAndSendSMS());
+        Test.setOnClickListener(v -> ((MainActivity) requireActivity()).DemandePermissionSMS());
+        loadSpinnerData();
         Save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
@@ -82,7 +83,7 @@ public class NotificationsFragment extends Fragment {
                     String NUM = DB.get(MSG, "number", "message", "labels"); // Aime pas espace dans message des fois non jsp
                     ContactNumEdt.setText(NUM);
                     ContactMsgEdt.setText(MSG);
-                    Edit.setVisibility(View.INVISIBLE);
+                    //Edit.setVisibility(View.INVISIBLE);
                 } else {
                     ContactNumEdt.setText("");
                     ContactMsgEdt.setText("");
